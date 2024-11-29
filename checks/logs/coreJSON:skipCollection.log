@@ -1,0 +1,122 @@
+c array.sh: path:     /data/cnf/sc2022/main/coreJSON:skipCollection.cnf.xz
+c array.sh: name:     coreJSON:skipCollection
+c array.sh: task:     380
+c array.sh: host:     c3n24
+c array.sh: uname:    Linux c3n24 5.4.0-166-generic #183-Ubuntu SMP Mon Oct 2 11:28:33 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+c array.sh: start:    Fri 24 Nov 2023 02:37:40 PM CET
+c array.sh: noturbo:  1
+c array.sh: governor: 32 performance
+c array.sh: tmp:      3%
+c array.sh: unzipped: /tmp/local-unzipped-24715725-380-coreJSON:skipCollection.cnf
+c --- [ banner ] -------------------------------------------------------------
+c 
+c CaDiCaL SAT Solver
+c Copyright (c) 2016-2023 A. Biere, M. Fleury, N. Froleyks, K. Fazekas, F. Pollitt
+c 
+c Version 1.9.0+vivify+0j 3637700f13e5f86519137ce8e91672ec524e8d4d
+c g++ (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0 -Wall -Wextra -O3 -DNDEBUG
+c Fri 24 Nov 2023 02:37:08 PM CET Linux cluster3 5.4.0-166-generic x86_64
+c 
+c --- [ parsing input ] ------------------------------------------------------
+c 
+c reading DIMACS file from '/tmp/local-unzipped-24715725-380-coreJSON:skipCollection.cnf'
+c opening file to read '/tmp/local-unzipped-24715725-380-coreJSON:skipCollection.cnf'
+c found 'p cnf 7315880 37734132' header
+c parsed 37734132 clauses in 23.14 seconds process time
+c 
+c --- [ options ] ------------------------------------------------------------
+c 
+c   --profile=4                    (different from default '2')
+c 
+c --- [ solving ] ------------------------------------------------------------
+c 
+c time measured in process time since initialization
+c 
+c  seconds    reductions  redundant   irredundant
+c          MB     restarts       trail          variables
+c            level   conflicts       glue             remaining
+c 
+c * 23.14 4981  0 0   0    0    0  0% 0 37442357 6753203 92%
+c { 25.14 5089  0 0   0    0    0  0% 0 37442357 6753203 92%
+c i 25.61 5090 8835 0   0    3    2 11% 1 37442357 6753202 92%
+c i 25.70 5090 6626 0   0    4    2 10% 0 37442357 6597812 90%
+c i 26.23 5101 5301 0   0    5    2 11% 0 37442357 6372589 87%
+c i 26.27 5102 4418 0   0    6    2 11% 0 37442357 6324804 86%
+c i 26.63 5111 4918 0   0   14    7 14% 440 37442357 6324800 86%
+c i 26.98 5133 5767 0   0   61   45 15% 211 37442357 6324796 86%
+c - 65.08 5309 8904 1  22  301  170 22% 1348 29587420 6324796 86%
+c i 124.00 5332 7732 1  25  346  213 21% 1150 29587419 6321942 86%
+c i 124.68 5332 6845 1  25  393  238 21% 992 29587419 6321922 86%
+c i 124.74 5332 6767 1  25  398  240 21% 979 29587419 6321916 86%
+c } 124.99 5332 3435 1  25 1000  772 22% 369 29587419 6321916 86%
+c [ 124.99 5332  0 1  25 1000  772  0% 0 29587419 6321916 86%
+c O 125.24 5332 859 1  25 1002  774 20% 2 29587419 6321916 86%
+c ] 133.11 5332 18735 1  25 1106  878 72% 5 29587419 6321916 86%
+c 1 133.11 5332 18735 1  25 1106  878 72% 5 29587419 6321916 86%
+c 
+c --- [ result ] -------------------------------------------------------------
+c 
+s SATISFIABLE
+c 
+c --- [ run-time profiling ] -------------------------------------------------
+c 
+c process time taken by individual solving procedures
+c (percentage relative to process time for solving)
+c 
+c        58.28   53.00% simplify
+c        55.65   50.60% vivify
+c        51.69   47.00% search
+c        41.56   37.79% unstable
+c        34.98   31.81% propagate
+c        25.56   23.24% connect
+c        23.14   21.05% parse
+c         8.13    7.39% stable
+c         4.66    4.23% reduce
+c         4.26    3.87% decide
+c         4.08    3.71% analyze
+c         3.63    3.31% collect
+c         3.13    2.84% restart
+c         2.64    2.40% transred
+c         2.00    1.82% lucky
+c         1.63    1.48% copy
+c         0.66    0.60% shrink
+c         0.42    0.38% bump
+c         0.17    0.16% minimize
+c   =================================
+c       109.97   82.61% solve
+c 
+c last line shows process time for solving
+c (percentage relative to total process time)
+c 
+c --- [ statistics ] ---------------------------------------------------------
+c 
+c chronological:               562        50.81 %  of conflicts
+c conflicts:                  1106        10.06    per second
+c decisions:                713781      6490.75    per second
+c fixed:                    917030        12.53 %  of all variables
+c learned:                    1045        94.48 %  per conflict
+c learned_lits:             897669       100.00 %  learned literals
+c minimized:                     0         0.00 %  learned literals
+c shrunken:                  74534         8.30 %  learned literals
+c minishrunken:             226262        25.21 %  learned literals
+c otfs:                        136        12.30 %  of conflict
+c propagations:          115036710         1.05 M  per second
+c rephased:                      1      1106.00    interval
+c restarts:                     25        44.24    interval
+c stabilizing:                   1         9.58 %  of conflicts
+c subsumed:                    181         0.00 %  of all clauses
+c strengthened:                113         0.00 %  of all clauses
+c trail reuses:                  0         0.00 %  of incremental calls
+c 
+c seconds are measured in process time for solving
+c 
+c --- [ resources ] ----------------------------------------------------------
+c 
+c total process time since initialization:       133.11    seconds
+c total real time since initialization:          133.11    seconds
+c maximum resident set size of process:         5742.36    MB
+c 
+c --- [ shutting down ] ------------------------------------------------------
+c 
+c exit 10
+c array.sh: end:      Fri 24 Nov 2023 02:40:10 PM CET

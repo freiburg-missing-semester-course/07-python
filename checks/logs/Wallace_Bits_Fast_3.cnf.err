@@ -1,0 +1,29 @@
+[runlim] version:		2.0.0rc2
+[runlim] host:			c3n07
+[runlim] time limit:		5000 seconds
+[runlim] real time limit:	5000 seconds
+[runlim] space limit:		7000 MB
+[runlim] argv[0]:		./binary
+[runlim] argv[1]:		-n
+[runlim] argv[2]:		--profile=4
+[runlim] argv[3]:		/tmp/local-unzipped-24715725-97-Wallace_Bits_Fast_3.cnf.cnf
+[runlim] start:			Fri Nov 24 14:37:40 2023
+[runlim] child:			810132
+[runlim] sample:		10.00 time, 10.01 real, 42 MB, 2.46 load
+[runlim] sample:		20.00 time, 20.01 real, 51 MB, 4.23 load
+[runlim] sample:		30.00 time, 30.01 real, 52 MB, 5.74 load
+[runlim] sample:		40.00 time, 40.01 real, 52 MB, 7.01 load
+[runlim] sample:		50.00 time, 50.01 real, 55 MB, 8.08 load
+[runlim] sample:		60.00 time, 60.01 real, 55 MB, 8.99 load
+[runlim] sample:		70.00 time, 70.01 real, 60 MB, 9.61 load
+[runlim] sample:		80.00 time, 80.01 real, 49 MB, 10.05 load
+[runlim] end:			Fri Nov 24 14:39:08 2023
+[runlim] status:		ok
+[runlim] result:		0
+[runlim] children:		1
+[runlim] processes:		2
+[runlim] real:			88.47 seconds
+[runlim] time:			88.40 seconds
+[runlim] space:			63 MB
+[runlim] load:			10.35 maximum
+[runlim] samples:		884
