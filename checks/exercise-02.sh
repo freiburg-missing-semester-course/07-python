@@ -1,14 +1,10 @@
 #!/bin/bash
 
+this_script=$(realpath "$0")
+dir=$(dirname "$this_script")
 
 `find $1 -name \*.log -exec \
-  awk 'function basename(file) {sub(".*/", "", file); return file }  \
-    BEGIN{status="UNKNOWN"} \
-    /^s .*$/{status=$2} \
-    /^.* search$/{search=$2;searchpercent=$3} \
-    /^.* simplify$/{simplify=$2;simplifypercent=$3} \
-    /^c total real time since initialization:/{totaltime=$7} \
-    END{printf("%s,%s,%s,%s,%s,%s,%s\n", substr(basename(FILENAME),0,length(basename(FILENAME))-4), status,totaltime,search,0+searchpercent,simplify,0+simplifypercent)}' {} \; > /tmp/exercise-02.log`
+  $dir/exercise-01.sh {} \; > /tmp/exercise-02.log`
 
 SAT=`grep ",SATISFIABLE" /tmp/exercise-02.log | wc -l`
 

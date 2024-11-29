@@ -6,4 +6,4 @@ awk 'function basename(file) {sub(".*/", "", file); return file }  \
     /^.* search$/{search=$2;searchpercent=$3} \
     /^.* simplify$/{simplify=$2;simplifypercent=$3} \
     /^c total real time since initialization:/{totaltime=$7} \
-    END{printf("%s,%1.2f,%1.2f,%1.2f,%1.2f,%1.2f,%1.2f\n", substr(basename(FILENAME),0,length(basename(FILENAME))-4), status,totaltime,search,0+searchpercent,simplify,0+simplifypercent)}' $1
+    END{printf("%s,%s,%1.2f,%1.2f,%1.2f,%1.2f,%1.2f\n", substr(basename(FILENAME),0,length(basename(FILENAME))-4), status,totaltime,search,0+searchpercent,simplify,0+simplifypercent)}' $1
