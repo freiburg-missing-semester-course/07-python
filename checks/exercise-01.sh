@@ -1,6 +1,6 @@
 #!/bin/bash
 
-awk 'function basename(file) {sub(".*/", "", file); return file }  \
+LC=C awk 'function basename(file) {sub(".*/", "", file); return file }  \
      BEGIN{status="UNKNOWN"} \
     /^s .*$/{status=$2} \
     /^.* search$/{search=$2;searchpercent=$3} \

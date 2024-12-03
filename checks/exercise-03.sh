@@ -1,5 +1,5 @@
 #!/bin/bash
-
+LC=C
 URL=$1
 
 echo "downloading from URL $URL"
