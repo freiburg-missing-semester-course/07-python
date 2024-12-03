@@ -1,5 +1,6 @@
 #!/bin/bash
 
+LC=C
 URL=$1
 
 
