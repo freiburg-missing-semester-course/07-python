@@ -13,4 +13,4 @@ dir=$(dirname "$this_script")
 # TODO: change here, but keep the $dir (it is the path where this script is, so if `python3
 # ./src/my_awesome_script.py --file <log_file>` works in your terminal, use `python3
 # $dir/src/my_awesome_script.py --file $file`)
-python3 $dir/my_awesome_script.py --file $file
+python3 "$dir/my_awesome_script.py" --file $file

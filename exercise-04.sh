@@ -12,4 +12,4 @@ dir=$(dirname "$this_script")
 # TODO: change here, but keep the $dir (it is the path where this script is, so if `python3
 # ./src/my_awesome_script.py --json --dir <log_dir>` works in your terminal, use `python3
 # $dir/src/my_awesome_script.py --dir $1`)
-python3 $dir/my_awesome_script.py --json --directory $directory
+python3 "$dir/my_awesome_script.py" --json --directory $directory
