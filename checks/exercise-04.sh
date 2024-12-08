@@ -1,5 +1,5 @@
 #!/bin/bash
-LC=C
+LC_ALL=C
 printf "{\"problems\": [
         {\"name\": \"Wallace_Bits_Fast_2.cnf\", \"status\": \"SATISFIABLE\", \"total_time\": 2.57, \"search_time\": 2.34, \"search_percent\": 91.64, \"simplify_time\": 0.21, \"simplify_percent\": 8.35},
         {\"name\": \"Wallace_Bits_Fast_3.cnf\", \"status\": \"SATISFIABLE\", \"total_time\": 88.46, \"search_time\": 81.58, \"search_percent\": 92.27, \"simplify_time\": 6.84, \"simplify_percent\": 7.73},
