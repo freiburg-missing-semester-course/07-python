@@ -67,7 +67,7 @@ then
     then
 	echo "correct output for directory"
     else
-	echo "incorrect output for directory: got `./exercise-02.sh logs | head -n5 | sort -k1 -k3` (after sorting) but expected $OUT"
+	echo "incorrect output for directory: got `../exercise-02.sh logs | head -n5 | sort -k1 -k3` (after sorting) but expected $OUT"
 	exit 1
     fi
 fi
@@ -79,7 +79,7 @@ if [ `../exercise-02.sh logs | tail -n 1 | md5sum | cut -d ' ' -f 1` = `./exerci
 then
     echo "correct answer"
 else
-    echo "incorrect output for directory: got `./exercise-02.sh logs | tail -n 1` (last line only to allow for output before) but expected `./exercise-02.sh logs | tail -n1`"
+    echo "incorrect output for directory: got `../exercise-02.sh logs | tail -n 1` (last line only to allow for output before) but expected `./exercise-02.sh logs | tail -n1`"
     exit 1
 fi
 
