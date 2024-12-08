@@ -168,7 +168,7 @@ c         1.84   75.27% search
 c         1.02   41.81% unstable
 c         0.83   33.76% propagate
 c         0.81   33.20% stable
-c         0.60   24.72% simplify
+c         0.61   24.72% simplify
 c         0.53   21.67% analyze
 c         0.27   11.18% elim
 c         0.20    7.99% shrink

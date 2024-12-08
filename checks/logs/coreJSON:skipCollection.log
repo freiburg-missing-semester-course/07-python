@@ -63,9 +63,9 @@ c
 c process time taken by individual solving procedures
 c (percentage relative to process time for solving)
 c 
-c        58.28   53.00% simplify
+c        58.28   53.01% simplify
 c        55.65   50.60% vivify
-c        51.69   47.00% search
+c        51.69   47.01% search
 c        41.56   37.79% unstable
 c        34.98   31.81% propagate
 c        25.56   23.24% connect
