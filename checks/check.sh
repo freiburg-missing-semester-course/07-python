@@ -46,7 +46,7 @@ do
     then
        echo "correct output for $file"
     else
-	echo "incorrect output for $file: got `../../exercise-01.sh $file` but expected $OUT"
+	echo "incorrect output for $file: got '`../../exercise-01.sh $file`' but expected $OUT"
 	exit 1
     fi
 done
