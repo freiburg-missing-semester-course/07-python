@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LC_ALL=C
+LC=C
 
 this_script=$(realpath "$0")
 dir=$(dirname "$this_script")

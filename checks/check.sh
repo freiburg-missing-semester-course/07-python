@@ -21,6 +21,8 @@ parse_argument() {
 
 debugq2="no"
 github="no"
+returning="no"
+fail="no"
 
 parse_argument "$@"
 
@@ -44,10 +46,14 @@ do
     extract_values $file
     if [ "`../../exercise-01.sh $file`" = $OUT ];
     then
-       echo "correct output for $file"
+      echo "correct output for $file"
     else
-	echo "incorrect output for $file: got '`../../exercise-01.sh $file`' but expected $OUT"
-	exit 1
+	  echo "incorrect output for $file: got `../../exercise-01.sh $file` but expected $OUT"
+if [ $returning = "yes" ];
+then
+	  exit 1
+fi
+fail="yes"
     fi
 done
 
@@ -65,10 +71,14 @@ then
 
     if [ `../exercise-02.sh logs | head -n5 | sort -k1 -k3 | md5sum | cut -d ' ' -f 1` = $hash ];
     then
-	echo "correct output for directory"
+	  echo "correct output for directory"
     else
-	echo "incorrect output for directory: got `../exercise-02.sh logs | head -n5 | sort -k1 -k3` (after sorting) but expected $OUT"
-	exit 1
+	  echo "incorrect output for directory: got `../exercise-02.sh logs | head -n5 | sort -k1 -k3` (after sorting) but expected $OUT"
+if [ $returning = "yes" ];
+then
+	  exit 1
+fi
+fail="yes"
     fi
 fi
 
@@ -79,8 +89,12 @@ if [ `../exercise-02.sh logs | tail -n 1 | md5sum | cut -d ' ' -f 1` = `./exerci
 then
     echo "correct answer"
 else
-    echo "incorrect output for directory: got `../exercise-02.sh logs | tail -n 1` (last line only to allow for output before) but expected `./exercise-02.sh logs | tail -n1`"
-    exit 1
+    echo "incorrect output for directory: got `./exercise-02.sh logs | tail -n 1` (last line only to allow for output before) but expected `./exercise-02.sh logs | tail -n1`"
+if [ $returning = "yes" ];
+then
+	  exit 1
+fi
+fail="yes"
 fi
 
 
@@ -100,7 +114,11 @@ else
 	echo "correct answer"
     else
 	echo "incorrect output for directory: got `../exercise-03.sh https://cca.informatik.uni-freiburg.de/missing-semester/ws23/cadical1.9-0j.tar.xz | tail -n 1` (last line only) but expected `printf "total: 400, SATISFIABLE: $SAT, UNSATISFIABLE: $UNSAT, UNKNOWN: $UNKNOWN"`"
-	exit 1
+if [ $returning = "yes" ];
+then
+	  exit 1
+fi
+fail="yes"
     fi
 fi
 
@@ -112,5 +130,15 @@ then
     echo "correct answer"
 else
     echo "incorrect output for directory: got `../exercise-04.sh logs | jq -S '.problems[]| join(\",\")' | sort -k1` (after CSV conversion) but expected `./exercise-04.sh | sort -k1`"
-    exit 1
+if [ $returning = "yes" ];
+then
+	  exit 1
 fi
+fail="yes"
+fi
+
+if [ $fail = "yes" ];
+then
+	  exit 1
+fi
+exit 0

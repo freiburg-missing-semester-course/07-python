@@ -5,7 +5,7 @@
 
 # this code is here to make sure that the scripts really really finds the script you are writing
 # DO NOT CHANGE
-LC=C
+LC_ALL=C
 directory=$1 #first argument of the script
 this_script=$(realpath "$0")
 dir=$(dirname "$this_script")
