@@ -89,7 +89,7 @@ if [ `../exercise-02.sh logs | tail -n 1 | md5sum | cut -d ' ' -f 1` = `./exerci
 then
     echo "correct answer"
 else
-    echo "incorrect output for directory: got `./exercise-02.sh logs | tail -n 1` (last line only to allow for output before) but expected `./exercise-02.sh logs | tail -n1`"
+    echo "incorrect output for directory: got `../exercise-02.sh logs | tail -n 1` (last line only to allow for output before) but expected `./exercise-02.sh logs | tail -n1`"
 if [ $returning = "yes" ];
 then
 	  exit 1
