@@ -8,13 +8,13 @@ dir=$(dirname "$this_script")
 `find $1 -name \*.log -exec \
   $dir/exercise-01.sh {} \; > /tmp/exercise-02.log`
 
-SAT=`grep ",SATISFIABLE" /tmp/exercise-02.log | wc -l`
+SAT=`grep ",SATISFIABLE" /tmp/exercise-02.log | expr $(wc -l)`
 
-UNSAT=`grep ",UNSATISFIABLE" /tmp/exercise-02.log | wc -l`
+UNSAT=`grep ",UNSATISFIABLE" /tmp/exercise-02.log | expr $(wc -l)`
 
-UNKNOWN=`grep ",UNKNOWN" /tmp/exercise-02.log | wc -l`
+UNKNOWN=`grep ",UNKNOWN" /tmp/exercise-02.log | expr $(wc -l)`
 
-ALL=`wc -l /tmp/exercise-02.log | xargs | cut -d ' ' -f 1`
+All=`wc -l /tmp/exercise-02.log | xargs | cut -d ' ' -f 1`
 
 cat  /tmp/exercise-02.log # | sort -k1 -k3
 rm -rf /tmp/exercise-02.log
