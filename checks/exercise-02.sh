@@ -14,7 +14,7 @@ UNSAT=`grep ",UNSATISFIABLE" /tmp/exercise-02.log | expr $(wc -l)`
 
 UNKNOWN=`grep ",UNKNOWN" /tmp/exercise-02.log | expr $(wc -l)`
 
-All=`wc -l /tmp/exercise-02.log | xargs | cut -d ' ' -f 1`
+ALL=`wc -l /tmp/exercise-02.log | xargs | cut -d ' ' -f 1`
 
 cat  /tmp/exercise-02.log # | sort -k1 -k3
 rm -rf /tmp/exercise-02.log
